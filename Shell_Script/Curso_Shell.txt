@@ -1,0 +1,122 @@
+Perguntar o que um comando faz
+whatis comando
+
+Saber qual Shell esta sendo usado
+echo $0
+echo $SHELL
+
+Mostar qual shell o usuario vai logar
+tail /etc/passwd
+
+Verificar se o bash esta instalado
+sudo dpkg -l | grep bash
+
+Voltar diretorios
+../../
+
+Voltar diretorio que estava antes
+cd -
+
+Voltar diretorio do usuario
+cd ~
+
+Ordena do mais velho para o mais novo
+ls -ltr
+
+Processos
+ps axu | more
+
+Criar arquivo Vazio ou atualizar horario
+touch arquivo
+
+Escrever na tela
+echo texto
+
+Sem quebra de linha
+
+echo -n texto
+
+Caracteres especiais
+
+echo -e "texto\n" \t tabulação \n nova linha
+
+Criar arvore diretorios
+mkdir -p
+
+Remover sem mensagens de erro
+rm -f
+
+Pausar tempo
+sleep 10
+
+Numerar linhas que nao estejam em branco
+cat -b
+
+Numerar geral
+cat -n
+
+Mostra caracteres especiais
+cat -A final de linha $
+
+Ler aquivo ao contrario
+tac
+
+Ler ultimas 5 linhas
+tail -n 5 
+
+Ler primeiras linhas
+head
+
+Ler primeiros 10 caracteres
+head -C 10
+
+Contar
+wc -l linhas -w palavras -m ou -c caracteres
+wc -l alunos*
+
+Colocar em ordem alfabetica
+sort ou sort -r
+
+Indice de ordenação 
+tail /etc/passwd | sort -k3 -t ":" -g
+
+Nao mostra linhas repetidas
+sort alunos3.txt | uniq
+
+Mostra linhas que nao estao repetidas
+sort alunos3.txt | uniq -u
+
+Mostra linhas que estao repetidas
+sort alunos3.txt | uniq -d
+
+Conta as repetições e colocar a resposta ordenada
+sort alunos3.txt | uniq -c | sort
+
+Trocar caracteres
+cat alunos3.txt | tr a @
+cat alunos3.txt | tr a-z A-Z
+cat alunos2.txt | tr '\t' ' '
+
+Deletar caracteres
+cat alunos2.txt | tr -d aei
+
+Remove caracteres repetidos em sequencia
+echo "Curso de Shell Script" | tr -s 'l'
+Curso de Shel Script
+
+Recortar caracters
+cat alunos2.txt | cut -c 1-5 ou 1,2,3 ou apos 5 -c5-
+
+Recortar campos
+cat alunos2.txt | cut -d " " -f1
+tail /etc/passwd | cut -d":" -f1
+
+Diferenca entre arquivos
+diff alunos.txt alunos3.txt 
+3c3
+< Ricardo
+---
+> Ricardo Prudenciato
+9d8
+< Maria
+
