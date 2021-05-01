@@ -119,4 +119,14 @@ diff alunos.txt alunos3.txt
 > Ricardo Prudenciato
 9d8
 < Maria
+diff -w ignora espaços
+-b -w -y -u
 
+Pesquisar dentro do arquivo
+grep Claudia alunos*
+-i -c -v -r -l -A3 -B3
+
+Alterar arquivos
+cat alunos2.txt | sed '1,3d' alunos2.txt deletar
+cat alunos2.txt | sed '/Rafael/d' alunos2.txt deletar
+cat alunos2.txt | sed 's/Paulo/Joao/g' substituir todos
