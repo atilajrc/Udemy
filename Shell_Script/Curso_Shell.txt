@@ -130,3 +130,115 @@ Alterar arquivos
 cat alunos2.txt | sed '1,3d' alunos2.txt deletar
 cat alunos2.txt | sed '/Rafael/d' alunos2.txt deletar
 cat alunos2.txt | sed 's/Paulo/Joao/g' substituir todos
+
+Paginar texto
+more
+less 
+/ pesquisar de cima para baixo n proxima ocorrencia N ocorrencia antrior 
+? de baixo para cima
+
+Procurar arquivos
+find ./ -name -execfind ./ -name alunos* -exec ls -l {} \;
+
+Data
+date +%H Hora
+date +%M Minuto
+date +%d/%m 03/05
+
+Sequencia
+seq 0 5 30
+
+Fazer contas
+expr 5 \* 2
+bc
+
+Seqencia de Comandos
+&& Executa o seguando comando somente se o primeiro nao der erro
+|| Executa o segundo comando somente se o primeiro der erro
+
+Diretorio anterior sem sair do diretorio atual
+( cd .. ; ls -l )
+
+Redirecionamento
+> Limpa e insere
+>> Acresenta
+2> Erro
+>> 2>&1 os dois no mesmo arquivo
+
+Buraco Negro do Shell
+/dev/null
+
+Redirecionamento de entrada
+tr a Z < alunos.txt
+
+Variavel
+VARIAVEL="Valor Atual"
+export VARIAVEL 
+HORA=`date +%H`
+MINUTO=$(date +%M) 
+echo $HORA:$MINUTO
+13:34
+
+Vi
+:1 promeira linha
+:$ ultima linha
+:20 linha 20
+:! Executar comando fora
+:/Busca n proximo N anterior
+dd remover ou recortar linha
+d4d remover numero de linhas 
+p colar as linhas
+yy copiar
+:w salvar
+:wq ou :x  salvar e sair
+:q! sair sem salvar
+
+Selecionar arquivos
+ls -la Aula[Aa][1-5]
+ls -la {Aula,AULA}11
+ls -la Aula?
+ls -la Aula??
+
+Expressoes Regulares
+egrep "b[aei]g" texto.txt
+egrep "b[a-o]g" texto.txt
+egrep "^Linux" texto.txt Primeira palavra da linha
+egrep "^#" texto.txt localizar comentarios
+egrep -v "^#" texto.txt  listar todas as linhas sem as linhas de comentario
+egrep -v "^$" texto.txt retirar linhas em branco
+egrep "b[a-i]g*" texto.txt o g pode ou nao aparecer
+egrep "b[a-i]g+" texto.txt o g tem que aparecer
+egrep "O.Linux" texto.txt o ponto e um caracter
+egrep "O.*Linux" texto.txt um caracter e qualquer coisa depois
+
+PATH="$PATH:/home/atila/vsCode/Shell_Script"
+vi ~/.profile 
+
+#########################################################
+#							#
+# primeiroscript.sh - Script de Exemplo do Curso	#
+#							#
+# Autor: Atila Costa (atilajrc@gmail.com)		#
+# Data Criação: 03/05/2021				#
+# 							#
+# Descrição: 						#
+#							#
+# Versão: 						#
+#							#
+#########################################################
+
+Exit Code
+$? Retorno 0 ok 1 Erro
+exit 10 Codigo de retorno vai ser 10
+
+Entrada Usuario
+read VAR1 VAR2 VAR3
+read -p "Informe o seu curso: " CURSO
+
+Parametros
+
+# $0 - Nome do Programa
+# $# - Quantidade de Parâmetros
+# $* - Todos os parâmetros inseridos
+# $1-9 - Cada um dos parâmetros
+
