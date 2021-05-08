@@ -13,7 +13,7 @@
 #									#
 #########################################################################
 
-ARQALUNOS="/home/ricardo/Cursos/ShellScript/arquivos/alunos2.txt"
+ARQALUNOS="/home/atila/vsCode/Udemy/Shell_Script/arquivos/alunos2.txt"
 
 clear
 echo "======= Script de Busca de Alunos ========"

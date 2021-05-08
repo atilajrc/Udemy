@@ -242,3 +242,48 @@ Parametros
 # $* - Todos os parâmetros inseridos
 # $1-9 - Cada um dos parâmetros
 
+Verificar se uma pasta existe
+[ -d ~/MyFolder ]
+
+Verifiacar se existe um arquivo
+[ -f ~/exemplo.txt ]
+
+Comparação
+test numericas
+-eq Igual
+-ne Diferente
+-gt Maior que
+-ge Maior ou igual
+-lt Menor que
+-le Menor ou igual
+
+test string
+= Igual
+!= Diferente
+-n Não nula
+-z Nula
+
+test arquivos
+-f E um arquivo
+-d E um diretorio
+-r Tem permissão de leitura
+-w escrita
+-x execução
+-s Tamanho maior que zero
+
+Negação
+! Exclamação
+if [ ! "$VAR1" -gt 10 ]
+
+Atender Duas opções
+-a
+[ "$VAR1" -gt 10 -a "$VAR1" -lt 20 ]
+
+Atender uma ou outra opção
+-o
+
+Pesquisar codigo retorno 
+echo $?
+
+
+

@@ -46,7 +46,7 @@ case $OPCAO in
         3)
 		if [ $VALOR1 -eq 0 -o $VALOR2 -eq 0 ] 
 		then
-			echo "Um valor 0 não pode ser utilizado em um multiplicação"
+			echo "Um valor 0 não pode ser utilizado em uma multiplicação"
 			exit 1
 		fi
 		OPER="*"
