@@ -2,7 +2,7 @@
 
 read -p "Qual o(a) melhor aluno(a): " MELHOR
 
-for i in $(cat ../arquivos/alunos.txt)
+for i in $(cat ../Arquivos/alunos.txt)
 do
 	if [ $i = $MELHOR ]
 	then
