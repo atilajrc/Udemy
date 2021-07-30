@@ -1,0 +1,7 @@
+ansible_ssh_user: atila
+ansible_ssh_pass: stu8kit
+ansible_become: yes
+ansible_become_method: sudo
+ansible_become_user: root
+ansible_become_pass: stu8kit
+

@@ -1,0 +1,9 @@
+----------------------------------
+         Servidor CENTOS
+
+Hostname: {{ ansible_fqdn  }}
+Linux: {{ ansible_distribution  }}
+Versão: {{ ansible_distribution_version  }}
+IP: {{ ansible_all_ipv4_addresses  }}
+
+----------------------------------

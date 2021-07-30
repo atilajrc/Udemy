@@ -1,0 +1,8 @@
+---
+
+# Instalação PHP
+
+- name: Instalação Pacote PHP
+  yum: name=php state=latest
+
+...

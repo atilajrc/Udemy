@@ -1,0 +1,18 @@
+#[windows]
+#winserver ansible_ssh_host=192.168.122.10
+
+[linux]
+centos ansible_ssh_host=192.168.122.30
+ubuntu ansible_ssh_host=192.168.122.40
+
+#[servidores:children]
+#windows
+#linux
+
+#[linux:vars]
+#ansible_ssh_user=atila
+#ansible_ssh_pass=stu8kit
+#ansible_become=yes
+#ansible_become_method=sudo
+#ansible_become_user=atila 
+#ansible_become_pass=stu8kit
